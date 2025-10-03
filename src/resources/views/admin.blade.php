@@ -22,6 +22,7 @@
       <div class="search-form__gender">
         <select class="search-form__gender-select" name="gender" value="{{request('gender')}}">
           <option disabled selected>性別</option>
+          <option value="" @if( request('gender')=="" ) selected @endif>すべて</option>
           <option value="1" @if( request('gender')==1 ) selected @endif>男性</option>
           <option value="2" @if( request('gender')==2 ) selected @endif>女性</option>
           <option value="3" @if( request('gender')==3 ) selected @endif>その他</option>
